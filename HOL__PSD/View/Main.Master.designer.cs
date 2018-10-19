@@ -31,6 +31,24 @@ namespace HOL__PSD.View {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Stylesheets;
         
         /// <summary>
+        /// LoginButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LoginButton;
+        
+        /// <summary>
+        /// AuthUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AuthUserName;
+        
+        /// <summary>
         /// Home control.
         /// </summary>
         /// <remarks>
