@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HOL__PSD.Model;
+using HOL__PSD.Util;
+using System;
 
 namespace HOL__PSD.View
 {
@@ -18,7 +20,14 @@ namespace HOL__PSD.View
         {
             if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
             {
-                Session.Add("auth_user", new User());
+                User adminUser = new User("admin", "Administrator", "admin", new DateTime(1990, 10, 10));
+                Session.Add("auth_user", adminUser);
+                Response.Redirect("Index.aspx");
+            }
+            else
+            {
+                String errorMessage = "Invalid username or password!";
+                PageUtility.Alert(this, errorMessage);
             }
         }
     }
