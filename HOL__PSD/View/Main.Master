@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="HOL__PSD.View.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../Assets/css/main-master.css" />
+    <link rel="stylesheet" type="text/css" href="../Assets/Bootstrap/css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder ID="Stylesheets" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form class="container-fluid" runat="server">
+        <div class="row">
+            <header>
+                <div class="container d-flex justify-content-between py-3">
+                    <h2>FiX Watch IV Century Shop</h2>
+
+                    <asp:Button Text="Login" runat="server"
+                        class="btn btn-primary"
+                        OnClick="btnLogin_Click" />
+                </div>
+
+                <div class="container d-flex align-items-center">
+                    <nav class="nav navbar-light">
+                        <asp:HyperLink 
+                                href="#"
+                                class="nav-item" 
+                                ID="Home" 
+                                runat="server">Home</asp:HyperLink>
+
+                        <asp:HyperLink 
+                            href="#"
+                            class="nav-item" 
+                            ID="Cart" 
+                            runat="server">My Cart</asp:HyperLink>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+        <div class="row main-content">
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="row">
+            <footer class="d-flex align-items-center p-3">
+                <span class="container">Copyright &copy; Software Laboratory Center</span>
+            </footer>
+        </div>
+    </form>
+</body>
+
+<script src="../Assets/js/jquery-3.3.1.min.js"></script>
+<script src="../Assets/Bootstrap/js/bootstrap.min.js"></script>
+<asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder>
+</html>

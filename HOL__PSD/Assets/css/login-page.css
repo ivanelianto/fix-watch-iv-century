@@ -1,0 +1,17 @@
+﻿.content-wrapper
+{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-wrapper .row
+{
+    margin-bottom: 1em;
+}
+
+.content-wrapper .input-group-text
+{
+    width: 100px;
+}

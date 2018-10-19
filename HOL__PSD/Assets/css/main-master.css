@@ -1,0 +1,46 @@
+﻿*
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    color: black !important;
+}
+
+form
+{
+    position: relative;
+    min-height: 100vh;
+}
+
+header
+{
+    width: 100%;
+}
+
+nav
+{
+    background-color: var(--light);
+    width: 100%;
+}
+
+nav .nav-item
+{
+    padding: 1em 0em 1em 1em;
+}
+
+.main-content
+{
+    min-height: calc(100vh - 182px);
+}
+
+footer
+{
+    background-color: var(--dark);
+    color: var(--light);
+    position: absolute;
+    bottom: 0;
+    height: 48px;
+    width: 100%;
+}
