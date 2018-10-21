@@ -39,7 +39,7 @@ footer
 {
     background-color: var(--dark);
     color: var(--light);
-    position: absolute;
+    position: relative;
     bottom: 0;
     height: 48px;
     width: 100%;

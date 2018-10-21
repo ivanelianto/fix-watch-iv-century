@@ -16,8 +16,7 @@ namespace HOL__PSD.View
         {
             Debug.WriteLine(txtUsername.Text + " : " +
                 txtPassword.Text + " : " +
-                calendarTanggalLahir.SelectedDate + " : " +
-                fileUploadFoto.FileName);
+                calendarTanggalLahir.SelectedDate + " : ");
         }
     }
 }
