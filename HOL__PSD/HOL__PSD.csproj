@@ -66,6 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\WatchShop.mdf" />
+    <Content Include="App_Data\WatchShop_log.ldf">
+      <DependentUpon>WatchShop.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\Bootstrap\css\bootstrap-grid.css" />
     <Content Include="Assets\Bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Assets\Bootstrap\css\bootstrap-reboot.css" />
@@ -106,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\User.cs" />
+    <Compile Include="Util\DbManager.cs" />
     <Compile Include="Util\PageUtility.cs" />
     <Compile Include="View\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
