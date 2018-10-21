@@ -24,22 +24,73 @@
                         class="btn btn-primary"
                         OnClick="btnLogin_Click" />
 
-                    <asp:Label ID="AuthUserName" runat="server" Text="Welcome, Karen Etania Saputra"/>
+                    <asp:Label ID="AuthUserName" runat="server" />
                 </div>
 
-                <div class="container d-flex align-items-center">
-                    <nav class="nav navbar-light">
-                        <asp:HyperLink 
-                                href="#"
-                                class="nav-item" 
-                                ID="Home" 
-                                runat="server">Home</asp:HyperLink>
+                <div class="container">
+                    <nav class="navbar navbar-inverse">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <asp:HyperLink
+                                    href="Index.aspx"
+                                    class="nav-link active"
+                                    ID="Home"
+                                    runat="server">Home</asp:HyperLink>
+                            </li>
 
-                        <asp:HyperLink 
-                            href="#"
-                            class="nav-item" 
-                            ID="Cart" 
-                            runat="server">My Cart</asp:HyperLink>
+                            <li class="nav-item">
+                                <asp:HyperLink
+                                    href="Cart.aspx"
+                                    class="nav-link"
+                                    ID="Cart"
+                                    runat="server">My Cart</asp:HyperLink>
+                            </li>
+
+                            <li class="nav-item">
+                                <asp:HyperLink
+                                    href="User.aspx"
+                                    class="nav-link"
+                                    ID="ManageUser"
+                                    Visible="false"
+                                    runat="server">Manage User</asp:HyperLink>
+                            </li>
+
+                            <li class="nav-item">
+                                <asp:HyperLink
+                                    href="Product.aspx"
+                                    class="nav-link"
+                                    ID="ManageProduct"
+                                    Visible="false"
+                                    runat="server">Manage Product</asp:HyperLink>
+                            </li>
+
+                            <li class="nav-item">
+                                <asp:HyperLink
+                                    href="Report.aspx"
+                                    class="nav-link"
+                                    ID="Report"
+                                    Visible="false"
+                                    runat="server">Report</asp:HyperLink>
+                            </li>
+                        </ul>
+
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <asp:HyperLink
+                                    href="Profile.aspx"
+                                    class="nav-link"
+                                    ID="EditProfile"
+                                    runat="server">Edit Profile</asp:HyperLink>
+                            </li>
+
+                            <li class="nav-item">
+                                <asp:HyperLink
+                                    href="Index.aspx"
+                                    class="nav-link"
+                                    ID="Logout"
+                                    runat="server">Logout</asp:HyperLink>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </header>
@@ -60,5 +111,5 @@
 
 <script src="../Assets/js/jquery-3.3.1.min.js"></script>
 <script src="../Assets/Bootstrap/js/bootstrap.min.js"></script>
-<asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder>
+<asp:contentplaceholder id="Scripts" runat="server"></asp:contentplaceholder>
 </html>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../Assets/css/login-page.css" />
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
+<asp:Content ContentPlaceHolderID="Content" runat="server">
     <div class="container content-wrapper">
         <div class="row align-items-center">
             <div class="col-md-4 offset-4 d-flex align-items-center input-group">

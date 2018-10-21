@@ -11,12 +11,25 @@ namespace HOL__PSD.View
             {
                 Cart.Visible = false;
                 AuthUserName.Visible = false;
+                EditProfile.Visible = false;
+                Logout.Visible = false;
             }
             else
             {
                 AuthUserName.Visible = true;
                 AuthUserName.Text = "Welcome, " + ((User)Session["auth_user"]).Name;
                 LoginButton.Visible = false;
+                AuthUserName.Visible = true;
+
+                if (((User)Session["auth_user"]).Role == "Admin")
+                {
+                    ManageUser.Visible = true;
+                    ManageProduct.Visible = true;
+                    Report.Visible = true;
+                }
+
+                EditProfile.Visible = true;
+                Logout.Visible = true;
             }
         }
 

@@ -5,7 +5,7 @@ namespace HOL__PSD.Util
 {
     public class DbManager
     {
-        static SqlConnection connection = null;
+        static SqlConnection connection;
 
         private DbManager() { }
 

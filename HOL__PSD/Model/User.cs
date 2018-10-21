@@ -7,11 +7,12 @@ namespace HOL__PSD.Model
         public String Username { get; set; }
         public String Name { get; set; }
         public String Password { get; set; }
+        public String Role { get; set; }
         public DateTime Birthday { get; set; }
 
         public User() { }
 
-        public User(String username, String name, String password, DateTime birthday)
+        public User(String username, String name, String password, String role, DateTime birthday)
         {
             this.Username = username;
             this.Name = name;

@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Web.UI;
 
-namespace HOL__PSD
+namespace HOL__PSD.View
 {
     public partial class RegisterPage : System.Web.UI.Page
     {

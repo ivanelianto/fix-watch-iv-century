@@ -82,6 +82,7 @@
     <Content Include="Assets\Bootstrap\js\bootstrap.min.js" />
     <Content Include="Assets\css\login-page.css" />
     <Content Include="Assets\css\main-master.css" />
+    <Content Include="Assets\css\register-page.css" />
     <Content Include="Assets\js\jquery-3.3.1.min.js" />
     <Content Include="packages.config" />
     <Content Include="Assets\Bootstrap\css\bootstrap-grid.css.map" />
