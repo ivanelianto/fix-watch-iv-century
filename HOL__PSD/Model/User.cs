@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HOL__PSD.Model
 {
@@ -11,6 +8,8 @@ namespace HOL__PSD.Model
         public String Name { get; set; }
         public String Password { get; set; }
         public DateTime Birthday { get; set; }
+
+        public User() { }
 
         public User(String username, String name, String password, DateTime birthday)
         {
