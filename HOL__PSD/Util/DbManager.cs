@@ -38,5 +38,19 @@ namespace HOL__PSD.Util
 
             return dt;
         }
+
+        public static void Execute(string query)
+        {
+            using (SqlConnection connection = GetInstance())
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
     }
 }

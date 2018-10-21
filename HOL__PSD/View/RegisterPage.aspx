@@ -32,6 +32,24 @@
         <div class="row align-items-center">
             <div class="col-md-4 offset-4 input-group">
                 <div class="input-group-prepend">
+                    <asp:Label ID="Label4" runat="server" Text="Name"
+                        class="input-group-text" />
+                </div>
+
+                <asp:TextBox ID="txtName" runat="server"
+                    class="form-control" />
+            </div>
+
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                ValidationGroup="groupRegister"
+                class="text-danger"
+                ErrorMessage="Nama harus diisi"
+                ControlToValidate="txtName" />
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-md-4 offset-4 input-group">
+                <div class="input-group-prepend">
                     <asp:Label ID="Label2" runat="server" Text="Password"
                         class="input-group-text" />
                 </div>
