@@ -24,6 +24,7 @@ namespace HOL__PSD.View
 
         protected void btnProcess_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             using (WatchShopEntities db = new WatchShopEntities())
             {
                 if (currentProduct == null)
@@ -50,6 +51,9 @@ namespace HOL__PSD.View
 
                 Response.Redirect("ManageProduct.aspx");
             }
+=======
+            Page.Validate();
+>>>>>>> a88ac2cb43467ed5e0a7bdbb967cd13e1aede8db
         }
     }
 }

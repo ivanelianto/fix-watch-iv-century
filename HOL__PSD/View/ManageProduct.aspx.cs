@@ -95,5 +95,10 @@ namespace HOL__PSD.View
         {
             Response.Redirect("MasterProduct.aspx");
         }
+
+        protected void btnAddNewProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
