@@ -13,22 +13,13 @@ namespace HOL__PSD.View {
     public partial class MasterProduct {
         
         /// <summary>
-        /// txtID control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtID;
-        
-        /// <summary>
-        /// requiredProductID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredProductID;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// txtName control.
@@ -40,13 +31,22 @@ namespace HOL__PSD.View {
         protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// requiredProductName control.
+        /// requiredName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredProductName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredName;
+        
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
         /// txtPrice control.
@@ -58,13 +58,31 @@ namespace HOL__PSD.View {
         protected global::System.Web.UI.WebControls.TextBox txtPrice;
         
         /// <summary>
-        /// priceValidator control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator priceValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// validatorPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator validatorPrice;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// txtStock control.
@@ -76,13 +94,22 @@ namespace HOL__PSD.View {
         protected global::System.Web.UI.WebControls.TextBox txtStock;
         
         /// <summary>
-        /// stockValidator control.
+        /// requiredStock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator stockValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredStock;
+        
+        /// <summary>
+        /// validatorStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator validatorStock;
         
         /// <summary>
         /// btnProcess control.
