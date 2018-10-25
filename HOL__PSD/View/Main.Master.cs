@@ -27,23 +27,25 @@ namespace HOL__PSD.View
                 if (Session["auth_user"] == null)
                 {
                     DataTable dt = DbManager.Get("SELECT * FROM [User] WHERE username='" + Request.Cookies["auth_user"].Value + "'");
-                    User currentUser = new User()
-                    {
-                        Username = dt.Rows[0]["username"].ToString(),
-                        Name = dt.Rows[0]["name"].ToString(),
-                        Password = dt.Rows[0]["password"].ToString(),
-                        Role = dt.Rows[0]["Role"].ToString(),
-                        Birthday = DateTime.Parse(dt.Rows[0]["birthday"].ToString())
-                    };
+                    User currentUser = new User();
+                    currentUser.username = dt.Rows[0]["username"].ToString();
+                    currentUser.name = dt.Rows[0]["name"].ToString();
+                    currentUser.password = dt.Rows[0]["password"].ToString();
+                    currentUser.role = dt.Rows[0]["Role"].ToString();
+                    currentUser.birthday = DateTime.Parse(dt.Rows[0]["birthday"].ToString());
+                    
                     Session.Add("auth_user", currentUser);
+
+                    if (Application["count_user"] == null)
+                        Application["count_user"] = 1;
                 }
 
                 AuthUserName.Visible = true;
-                AuthUserName.Text = "Welcome, " + ((User)Session["auth_user"]).Name;
+                AuthUserName.Text = "Welcome, " + ((User)Session["auth_user"]).name;
                 LoginButton.Visible = false;
                 AuthUserName.Visible = true;
 
-                if (((User)Session["auth_user"]).Role == "Admin")
+                if (((User)Session["auth_user"]).role == "Admin")
                 {
                     ManageUser.Visible = true;
                     ManageProduct.Visible = true;

@@ -10,6 +10,7 @@ namespace HOL__PSD.View
             if (Request.QueryString["logout"] == "true")
             {
                 Application["count_user"] = ((int)Application["count_user"]) - 1;
+
                 Session.Clear();
 
                 HttpCookie authUser = Request.Cookies["auth_user"];

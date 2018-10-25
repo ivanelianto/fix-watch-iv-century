@@ -30,7 +30,6 @@
                     runat="server">
                     <asp:TableHeaderRow>
                         <asp:TableHeaderCell>No.</asp:TableHeaderCell>
-                        <asp:TableHeaderCell>Product ID</asp:TableHeaderCell>
                         <asp:TableHeaderCell>Product Name</asp:TableHeaderCell>
                         <asp:TableHeaderCell>Price</asp:TableHeaderCell>
                         <asp:TableHeaderCell>Stock</asp:TableHeaderCell>

@@ -75,11 +75,11 @@ namespace HOL__PSD.View
             if (int.TryParse(currentButton.ID.Substring(0, currentButton.ID.Length - 2), out selectedRowIndex))
             {
                 User user = new User();
-                user.Username = ((Label)UserTable.Rows[selectedRowIndex].Cells[1].Controls[0]).Text;
-                user.Name = ((Label)UserTable.Rows[selectedRowIndex].Cells[2].Controls[0]).Text;
-                user.Password = ((Label)UserTable.Rows[selectedRowIndex].Cells[3].Controls[0]).Text;
-                user.Role = ((Label)UserTable.Rows[selectedRowIndex].Cells[4].Controls[0]).Text;
-                user.Birthday = DateTime.Parse(((Label)UserTable.Rows[selectedRowIndex].Cells[5].Controls[0]).Text);
+                user.username = ((Label)UserTable.Rows[selectedRowIndex].Cells[1].Controls[0]).Text;
+                user.name = ((Label)UserTable.Rows[selectedRowIndex].Cells[2].Controls[0]).Text;
+                user.password = ((Label)UserTable.Rows[selectedRowIndex].Cells[3].Controls[0]).Text;
+                user.role = ((Label)UserTable.Rows[selectedRowIndex].Cells[4].Controls[0]).Text;
+                user.birthday = DateTime.Parse(((Label)UserTable.Rows[selectedRowIndex].Cells[5].Controls[0]).Text);
 
                 Session.Add("user_to_edit", user);
                 Response.Redirect("MasterUser.aspx");

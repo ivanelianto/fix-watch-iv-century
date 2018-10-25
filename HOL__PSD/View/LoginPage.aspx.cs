@@ -26,20 +26,26 @@ namespace HOL__PSD.View
             
             if (dt.Rows.Count > 0)
             {
-                User adminUser = new User()
-                {
-                    Username = dt.Rows[0]["username"].ToString(),
-                    Name = dt.Rows[0]["name"].ToString(),
-                    Password = dt.Rows[0]["password"].ToString(),
-                    Role = dt.Rows[0]["Role"].ToString(),
-                    Birthday = DateTime.Parse(dt.Rows[0]["birthday"].ToString())
-                };
+                //User adminUser = new User()
+                //{
+                //    Username = dt.Rows[0]["username"].ToString(),
+                //    Name = dt.Rows[0]["name"].ToString(),
+                //    Password = dt.Rows[0]["password"].ToString(),
+                //    Role = dt.Rows[0]["Role"].ToString(),
+                //    Birthday = DateTime.Parse(dt.Rows[0]["birthday"].ToString())
+                //};
+                User adminUser = new User();
+                adminUser.username = dt.Rows[0]["username"].ToString();
+                adminUser.name = dt.Rows[0]["name"].ToString();
+                adminUser.password = dt.Rows[0]["password"].ToString();
+                adminUser.role = dt.Rows[0]["Role"].ToString();
+                adminUser.birthday = DateTime.Parse(dt.Rows[0]["birthday"].ToString());
 
                 Session.Add("auth_user", adminUser);
 
                 if (checkBoxRemember.Checked)
                 {
-                    HttpCookie cookie = new HttpCookie("auth_user", adminUser.Username);
+                    HttpCookie cookie = new HttpCookie("auth_user", adminUser.username);
                     cookie.Expires = DateTime.Now.AddHours(1.0);
                     Response.Cookies.Add(cookie);
                 }

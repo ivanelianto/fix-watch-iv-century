@@ -15,11 +15,11 @@ namespace HOL__PSD.View
             if (Session["user_to_edit"] != null)
             {
                 selectedUser = (User)Session["user_to_edit"];
-                txtUsername.Text = selectedUser.Username;
-                txtName.Text = selectedUser.Name;
-                txtPassword.Attributes.Add("value", selectedUser.Password);
-                roleDropDownList.SelectedValue = selectedUser.Role;
-                calendarTanggalLahir.SelectedDate = selectedUser.Birthday;
+                txtUsername.Text = selectedUser.username;
+                txtName.Text = selectedUser.name;
+                txtPassword.Attributes.Add("value", selectedUser.password);
+                roleDropDownList.SelectedValue = selectedUser.role;
+                calendarTanggalLahir.SelectedDate = (DateTime) selectedUser.birthday;
             }
         }
 
@@ -34,7 +34,7 @@ namespace HOL__PSD.View
             if (Session["user_to_edit"] != null)
             {
                 // Operasi Update
-                DbManager.Execute("UPDATE [User] SET username='" + username + "', name='" + name + "',password='" + password + "',role='" + role + "', birthday='" + birthday + "' WHERE username='" + selectedUser.Username + "'");
+                DbManager.Execute("UPDATE [User] SET username='" + username + "', name='" + name + "',password='" + password + "',role='" + role + "', birthday='" + birthday + "' WHERE username='" + selectedUser.username + "'");
                 PageUtility.Alert(this, "Pembaruan Data User Berhasil!");
             }
             else
