@@ -1,6 +1,7 @@
 ﻿using HOL__PSD.Util;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -17,30 +18,7 @@ namespace HOL__PSD.View
 
         protected void btnProcess_Click(object sender, EventArgs e)
         {
-            Page.Validate();
-        }
-
-        protected void priceValidator_ServerValidate(object source, ServerValidateEventArgs args)
-        {
-            int price = 0;
-            if (int.TryParse(args.Value, out price))
-            {
-                if (price < 1000)
-                {
-                    ((CustomValidator)source).ErrorMessage = "Harga Minimal adalah 1000";
-                    args.IsValid = false;
-                }
-            }
-            else
-            {
-                ((CustomValidator)source).ErrorMessage = "Harga Harus Diisi dan Adalah Nilai";
-                args.IsValid = false;
-            }
-        }
-
-        protected void stockValidator_ServerValidate(object source, ServerValidateEventArgs args)
-        {
-
+            
         }
     }
 }
