@@ -11,6 +11,8 @@ namespace HOL__PSD.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session.Remove("product_to_edit");
+
             using (WatchShopEntities db = new WatchShopEntities())
             {
                 List<Product> products = db.Product.ToList();
