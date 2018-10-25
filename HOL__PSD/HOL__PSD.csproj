@@ -106,6 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="View\LoginPage.aspx" />
+    <Content Include="View\ManageProduct.aspx" />
+    <Content Include="View\ManageUser.aspx" />
+    <Content Include="View\MasterProduct.aspx" />
+    <Content Include="View\MasterUser.aspx" />
     <Content Include="View\RegisterPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -134,6 +138,34 @@
     </Compile>
     <Compile Include="View\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManageProduct.aspx.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ManageProduct.aspx.designer.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManageUser.aspx.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ManageUser.aspx.designer.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MasterProduct.aspx.cs">
+      <DependentUpon>MasterProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MasterProduct.aspx.designer.cs">
+      <DependentUpon>MasterProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MasterUser.aspx.cs">
+      <DependentUpon>MasterUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MasterUser.aspx.designer.cs">
+      <DependentUpon>MasterUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\RegisterPage.aspx.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>

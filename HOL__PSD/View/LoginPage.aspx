@@ -18,10 +18,10 @@
                         class="input-group-text" />
                 </div>
 
-                <asp:TextBox ID="txtUsername" runat="server" placeholder="Username" 
-                    class="form-control"/>
+                <asp:TextBox ID="txtUsername" runat="server" placeholder="Username"
+                    class="form-control" />
             </div>
-                
+
             <asp:RequiredFieldValidator ID="requiredUsername" runat="server"
                 class="text-danger"
                 ValidationGroup="groupLogin"
@@ -41,24 +41,34 @@
             </div>
 
             <asp:RequiredFieldValidator ID="requiredPassword" runat="server"
-                    class="text-danger"
-                    ValidationGroup="groupLogin"
-                    ErrorMessage="Password harus diisi"
-                    ControlToValidate="txtPassword" />
+                class="text-danger"
+                ValidationGroup="groupLogin"
+                ErrorMessage="Password harus diisi"
+                ControlToValidate="txtPassword" />
+        </div>
+
+        <div class="row aling-items-center">
+            <div class="col-md-4 offset-4 d-flex align-items-center input-group">
+                <asp:CheckBox
+                    ID="checkBoxRemember" 
+                    Text="Remember Me"
+                    CssClass="m-0"
+                    runat="server" />
+            </div>
         </div>
 
         <div class="row">
             <div class="col-md-2 offset-5">
-                <asp:Button ID="btnRegister" runat="server" 
-                    Text="Register" 
-                    OnClick="btnRegister_Click" 
-                    class="btn btn-secondary"/>
+                <asp:Button ID="btnRegister" runat="server"
+                    Text="Register"
+                    OnClick="btnRegister_Click"
+                    class="btn btn-secondary" />
 
-                <asp:Button ID="btnLogin" runat="server" 
-                    Text="Login" 
+                <asp:Button ID="btnLogin" runat="server"
+                    Text="Login"
                     ValidationGroup="groupLogin"
                     OnClick="btnLogin_Click"
-                    class="btn btn-primary"/>
+                    class="btn btn-primary" />
             </div>
         </div>
     </div>

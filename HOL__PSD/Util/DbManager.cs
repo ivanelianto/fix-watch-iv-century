@@ -11,11 +11,9 @@ namespace HOL__PSD.Util
 
         public static SqlConnection GetInstance()
         {
-            if (DbManager.connection == null)
-            {
-                string attachDbFilename = @"F:\! Work\HOL PSD\HOL__PSD\HOL__PSD\App_Data\WatchShop.mdf";
-                DbManager.connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + attachDbFilename + ";Integrated Security=True");
-            }
+            //string attachDbFilename = @"F:\! Work\HOL PSD\HOL__PSD\HOL__PSD\App_Data\WatchShop.mdf";
+            //DbManager.connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + attachDbFilename + ";Integrated Security=True");
+            DbManager.connection = new SqlConnection(@"Data Source=.\SQLEXPRESS17;Initial Catalog=WatchShop;Integrated Security=True");
 
             return DbManager.connection;
         }

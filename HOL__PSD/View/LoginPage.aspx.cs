@@ -2,6 +2,8 @@
 using HOL__PSD.Util;
 using System;
 using System.Data;
+using System.Diagnostics;
+using System.Web;
 
 namespace HOL__PSD.View
 {
@@ -32,7 +34,22 @@ namespace HOL__PSD.View
                     Role = dt.Rows[0]["Role"].ToString(),
                     Birthday = DateTime.Parse(dt.Rows[0]["birthday"].ToString())
                 };
+
                 Session.Add("auth_user", adminUser);
+
+                if (checkBoxRemember.Checked)
+                {
+                    HttpCookie cookie = new HttpCookie("auth_user", adminUser.Username);
+                    cookie.Expires = DateTime.Now.AddHours(1.0);
+                    Response.Cookies.Add(cookie);
+                }
+
+                //if (Application["count_user"] == null)
+                //    Application["count_user"] = 1;
+                //else
+
+                Application["count_user"] = ((int)Application["count_user"]) + 1;
+                
                 Response.Redirect("Index.aspx");
             }
             else

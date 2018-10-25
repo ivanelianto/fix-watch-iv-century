@@ -48,7 +48,7 @@
 
                             <li class="nav-item">
                                 <asp:HyperLink
-                                    href="User.aspx"
+                                    href="ManageUser.aspx"
                                     class="nav-link"
                                     ID="ManageUser"
                                     Visible="false"
@@ -57,7 +57,7 @@
 
                             <li class="nav-item">
                                 <asp:HyperLink
-                                    href="Product.aspx"
+                                    href="ManageProduct.aspx"
                                     class="nav-link"
                                     ID="ManageProduct"
                                     Visible="false"
@@ -85,7 +85,7 @@
 
                             <li class="nav-item">
                                 <asp:HyperLink
-                                    href="Index.aspx"
+                                    href="Index.aspx?logout=true"
                                     class="nav-link"
                                     ID="Logout"
                                     runat="server">Logout</asp:HyperLink>
@@ -102,9 +102,17 @@
         </div>
 
         <div class="row">
-            <footer class="d-flex align-items-center p-3">
-                <span class="container">Copyright &copy; Software Laboratory Center</span>
+            <footer class="p-3">
+                <div class="container d-flex justify-content-between">
+                    <span>Copyright &copy; Software Laboratory Center</span>
+
+                    <asp:Label
+                        Text="0 User Online"
+                        ID="txtCountUserLoggedIn"
+                        runat="server" />
+                </div>
             </footer>
+
         </div>
     </form>
 </body>
