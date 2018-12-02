@@ -73,12 +73,11 @@ D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\ro
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\HOL__PSD.dll.config
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\HOL__PSD.dll
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\HOL__PSD.pdb
-D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\obj\Debug\HOL__PSD.csprojResolveAssemblyReference.cache
-D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\obj\Debug\HOL__PSD.dll
-D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\obj\Debug\HOL__PSD.pdb
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\EntityFramework.dll
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\EntityFramework.SqlServer.dll
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\EntityFramework.xml
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\EntityFramework.SqlServer.xml
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\obj\Debug\HOL__PSD.dll
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\obj\Debug\HOL__PSD.pdb
