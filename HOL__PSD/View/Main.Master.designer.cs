@@ -94,6 +94,15 @@ namespace HOL__PSD.View {
         protected global::System.Web.UI.WebControls.HyperLink Report;
         
         /// <summary>
+        /// MyTransaction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink MyTransaction;
+        
+        /// <summary>
         /// EditProfile control.
         /// </summary>
         /// <remarks>

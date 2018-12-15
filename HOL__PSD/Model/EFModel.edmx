@@ -13,7 +13,7 @@
           <Property Name="trans_id" Type="int" Nullable="false" />
           <Property Name="product_id" Type="int" Nullable="false" />
           <Property Name="price" Type="money" />
-          <Property Name="stock" Type="int" />
+          <Property Name="quantity" Type="int" />
         </EntityType>
         <EntityType Name="HeaderTransaction">
           <Key>
@@ -109,7 +109,7 @@
           <Property Name="trans_id" Type="Int32" Nullable="false" />
           <Property Name="product_id" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="stock" Type="Int32" />
+          <Property Name="quantity" Type="Int32" />
           <NavigationProperty Name="Product" Relationship="Self.FK__DetailTra__produ__173876EA" FromRole="DetailTransaction" ToRole="Product" />
           <NavigationProperty Name="HeaderTransaction" Relationship="Self.FK__DetailTra__trans__164452B1" FromRole="DetailTransaction" ToRole="HeaderTransaction" />
         </EntityType>
@@ -210,7 +210,7 @@
                 <ScalarProperty Name="trans_id" ColumnName="trans_id" />
                 <ScalarProperty Name="product_id" ColumnName="product_id" />
                 <ScalarProperty Name="price" ColumnName="price" />
-                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

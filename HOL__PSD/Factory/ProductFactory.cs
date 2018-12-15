@@ -9,10 +9,11 @@ namespace HOL__PSD.Factory
             return new Product();
         }
 
-        public static Product Create(string name, decimal price)
+        public static Product Create(int id, string name, decimal price)
         {
             Product product = new Product()
             {
+                id = id,
                 name = name,
                 price = price
             };

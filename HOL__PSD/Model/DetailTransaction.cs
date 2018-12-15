@@ -17,7 +17,7 @@ namespace HOL__PSD.Model
         public int trans_id { get; set; }
         public int product_id { get; set; }
         public Nullable<decimal> price { get; set; }
-        public Nullable<int> stock { get; set; }
+        public Nullable<int> quantity { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual HeaderTransaction HeaderTransaction { get; set; }

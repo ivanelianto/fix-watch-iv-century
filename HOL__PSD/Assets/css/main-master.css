@@ -32,7 +32,7 @@ nav .nav-item
 
 .main-content
 {
-    min-height: calc(100vh - 214px);
+    min-height: calc(100vh - 222px);
 }
 
 footer
@@ -41,6 +41,5 @@ footer
     color: var(--light);
     position: relative;
     bottom: 0;
-    height: 48px;
     width: 100%;
 }

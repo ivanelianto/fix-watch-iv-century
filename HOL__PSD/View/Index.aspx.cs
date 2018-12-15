@@ -1,10 +1,16 @@
-﻿using System;
+﻿using HOL__PSD.Handler;
+using HOL__PSD.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 
 namespace HOL__PSD.View
 {
     public partial class Index : System.Web.UI.Page
     {
+        protected List<Product> products = new List<Product>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["logout"] == "true")
@@ -23,6 +29,15 @@ namespace HOL__PSD.View
                 }
 
                 Response.Redirect("Index.aspx");
+            }
+
+            using (WatchShopEntities db = new WatchShopEntities())
+            {
+                int count = db.Product.Count();
+                if (count > 0)
+                {
+                    products = db.Product.ToList();
+                }
             }
         }
     }
