@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WatchShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DetailTransaction">
+    <Key>
+      <PropertyRef Name="trans_id" />
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="trans_id" Type="Int32" Nullable="false" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="quantity" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__DetailTra__produ__173876EA" FromRole="DetailTransaction" ToRole="Product" />
+    <NavigationProperty Name="HeaderTransaction" Relationship="Self.FK__DetailTra__trans__164452B1" FromRole="DetailTransaction" ToRole="HeaderTransaction" />
+  </EntityType>
+  <EntityType Name="HeaderTransaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="occurance" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DetailTransaction" Relationship="Self.FK__DetailTra__trans__164452B1" FromRole="HeaderTransaction" ToRole="DetailTransaction" />
+    <NavigationProperty Name="User" Relationship="Self.FK__HeaderTra__user___145C0A3F" FromRole="HeaderTransaction" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="stock" Type="Int32" />
+    <NavigationProperty Name="DetailTransaction" Relationship="Self.FK__DetailTra__produ__173876EA" FromRole="Product" ToRole="DetailTransaction" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="birthday" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="HeaderTransaction" Relationship="Self.FK__HeaderTra__user___145C0A3F" FromRole="User" ToRole="HeaderTransaction" />
+  </EntityType>
+  <Association Name="FK__DetailTra__produ__173876EA">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="DetailTransaction" Type="Self.DetailTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetailTransaction">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetailTra__trans__164452B1">
+    <End Role="HeaderTransaction" Type="Self.HeaderTransaction" Multiplicity="1" />
+    <End Role="DetailTransaction" Type="Self.DetailTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HeaderTransaction">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetailTransaction">
+        <PropertyRef Name="trans_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HeaderTra__user___145C0A3F">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="HeaderTransaction" Type="Self.HeaderTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="username" />
+      </Principal>
+      <Dependent Role="HeaderTransaction">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WatchShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DetailTransaction" EntityType="Self.DetailTransaction" />
+    <EntitySet Name="HeaderTransaction" EntityType="Self.HeaderTransaction" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK__DetailTra__produ__173876EA" Association="Self.FK__DetailTra__produ__173876EA">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="DetailTransaction" EntitySet="DetailTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetailTra__trans__164452B1" Association="Self.FK__DetailTra__trans__164452B1">
+      <End Role="HeaderTransaction" EntitySet="HeaderTransaction" />
+      <End Role="DetailTransaction" EntitySet="DetailTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HeaderTra__user___145C0A3F" Association="Self.FK__HeaderTra__user___145C0A3F">
+      <End Role="User" EntitySet="User" />
+      <End Role="HeaderTransaction" EntitySet="HeaderTransaction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

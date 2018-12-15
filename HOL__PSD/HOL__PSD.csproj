@@ -132,10 +132,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Web References\WebService\MainService.wsdl" />
-    <None Include="Web References\WebService\Reference.map">
+    <Content Include="Web References\WebService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -151,8 +151,8 @@
     <Content Include="View\MasterUser.aspx" />
     <Content Include="View\ProductDetail.aspx" />
     <Content Include="View\RegisterPage.aspx" />
-    <None Include="Web References\WebService\MainService.disco" />
     <Content Include="View\TransactionHistoryPage.aspx" />
+    <None Include="Web References\WebService\MainService.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -286,10 +286,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferences Include="Web References\" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="http://localhost:13771/MainService.asmx">
