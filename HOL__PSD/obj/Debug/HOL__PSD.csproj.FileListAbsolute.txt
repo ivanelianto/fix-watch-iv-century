@@ -82,3 +82,6 @@ D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\En
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\obj\Debug\HOL__PSD.dll
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\obj\Debug\HOL__PSD.pdb
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Newtonsoft.Json.dll
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Newtonsoft.Json.pdb
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL__PSD\bin\Newtonsoft.Json.xml

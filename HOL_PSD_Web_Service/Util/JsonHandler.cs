@@ -1,4 +1,5 @@
-﻿using System.Web.Script.Serialization;
+﻿using Newtonsoft.Json;
+using System.Web.Script.Serialization;
 
 namespace HOL_PSD_Web_Service.Util
 {
@@ -8,12 +9,12 @@ namespace HOL_PSD_Web_Service.Util
 
         public static string Encode(object data)
         {
-            return jss.Serialize(data);
+            return JsonConvert.SerializeObject(data);
         }
 
         public static T Decode<T>(string data)
         {
-            return jss.Deserialize<T>(data);
+            return JsonConvert.DeserializeObject<T>(data);
         }
     }
 }

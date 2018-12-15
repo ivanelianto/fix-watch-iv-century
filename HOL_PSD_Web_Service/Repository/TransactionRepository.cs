@@ -10,26 +10,25 @@ namespace HOL_PSD_Web_Service.Repository
         {
             using (WatchShopEntities db = new WatchShopEntities())
             {
-                db.Configuration.LazyLoadingEnabled = false;
                 db.Configuration.ProxyCreationEnabled = false;
 
-                List<HeaderTransaction> headers = db.HeaderTransaction
+                return db.HeaderTransaction
                     .Where(x => x.user_id == username)
                     .Select(x => x)
                     .ToList();
+            }
+        }
 
-                foreach (var header in headers)
-                {
-                    List<DetailTransaction> details = db.DetailTransaction
-                        .Include("Product")
-                        .Where(detail => detail.trans_id == header.id)
-                        .Select(detail => detail)
-                        .ToList();
+        public static List<DetailTransaction> FindDetailByTransactionId(int transactionId)
+        {
+            using (WatchShopEntities db = new WatchShopEntities())
+            {
+                db.Configuration.ProxyCreationEnabled = false;
 
-                    header.DetailTransaction = details;
-                }
-
-                return headers;
+                return db.DetailTransaction
+                    .Where(x => x.trans_id == transactionId)
+                    .Select(x => x)
+                    .ToList();
             }
         }
     }

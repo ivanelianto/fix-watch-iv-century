@@ -22,3 +22,6 @@ D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL_PSD_Web_Ser
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL_PSD_Web_Service\bin\EntityFramework.xml
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL_PSD_Web_Service\bin\EntityFramework.SqlServer.xml
 D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL_PSD_Web_Service\obj\Debug\HOL_PSD_Web_Service.csprojResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL_PSD_Web_Service\bin\Newtonsoft.Json.dll
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL_PSD_Web_Service\bin\Newtonsoft.Json.pdb
+D:\My Documents\Visual Studio 2015\Projects\fix-watch-iv-century\HOL_PSD_Web_Service\bin\Newtonsoft.Json.xml
